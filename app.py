@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from qrCode import generate_qr_code as generate_review_qr_code
 from twoFA import generate_qr_code as generate_2fa_qr_code
-from appDatabase import create_app, db, User, Club, Review  # Adjusted import for database setup
+from database import create_app, db, User, Club, Review  # Adjusted import for database setup
 
 app = Flask(__name__) 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///clubs.db'  # Set your database URI
