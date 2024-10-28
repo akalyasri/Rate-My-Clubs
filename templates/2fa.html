@@ -1,0 +1,27 @@
+<h3>Scan this QR code to set up 2FA</h3>
+<img src="{{ url_for('static', filename=qr_code_path) }}" alt="QR Code">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Factor Authentication</title>
+</head>
+<body>
+    <h1>Two-Factor Authentication</h1>
+    <form id="2fa-form" action="/2fa-handler" method="POST">
+        <label for="2fa-code">Enter the code sent to your email:</label>
+        <input type="text" id="2fa-code" name="2fa-code" required>
+        <button type="submit">Verify</button>
+    </form>
+</body>
+
+<form id="2fa-form" action="/2fa-handler" method="POST">
+    <label for="2fa-code">Enter the code sent to your email:</label>
+    <input type="text" id="2fa-code" name="2fa-code" required>
+    <button type="submit">Verify</button>
+</form>
+
+</html>
+
