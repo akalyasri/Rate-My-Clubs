@@ -650,6 +650,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     font-weight: 300;
 }/* testimonial-comment */
 
+#autoScrollButton {
+    font-size: 0.8em; /* Adjust this value as needed */
+    padding: 5px 10px; /* Optional: adjust padding for better appearance */
+    margin-top: 10px; /* Optional: add space above the button */
+}
 
 /*.slick-slide*/
 .slick-initialized .slick-slide {
@@ -719,37 +724,63 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         10. Blog
 --------------------------------------*/
-.blog{padding:120px 0 90px;}
-.blog-content{margin-top: 80px;}
-
-.single-blog-item{
-    margin-bottom: 30px;
-    box-shadow: 0 0px 5px rgba(71,71,71,.2);
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
-}
-.single-blog-item-txt {padding:  25px 28px 27px;}
-.single-blog-item-txt h2 a {text-transform:  initial;line-height: 1.8;}
-.single-blog-item-txt h4 {
-    font-size:  14px;
-    color:  #8f949d;
-    font-weight:  400;
-    margin: 12px 0 20px;
-}
-.single-blog-item-txt h4 a {
-    font-size:  14px;
-    padding-right:  14px;
-    border-right: 1px solid #dde0e4;
-    margin-right:  15px;
-    text-transform: uppercase;
+/* Blog Section */
+.blog {
+    padding: 120px 0 90px;
 }
 
-.single-blog-item:hover h2 a {color:#ff545a;}
-.single-blog-item:hover{
-    box-shadow: 0 10px 20px rgba(21,19,19,.4);
+.section-header h2 {
+    color: #ff545a; /* Vibrant accent color for the header */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Review Form */
+.review-form {
+    background-color: #ffffff; /* Keep the background white */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 30px;
+}
+
+.review-form h3 {
+    color: #333; /* Darker color for the form heading */
+    margin-bottom: 15px;
+}
+
+/* Form Control Styles */
+.form-control {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    width: 100%; /* Full width */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-control:focus {
+    border-color: #ff545a; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(255, 84, 90, 0.5); /* Add a glow effect */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #ff545a; /* Primary button color */
+    border: none; /* Remove border */
+    color: #fff; /* White text */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.btn-primary:hover {
+    background-color: #e03e4f; /* Darker shade on hover */
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 
