@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            margin: 20px 0;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+        }
+        a {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Successful</h1>
+    <p>Your QR code:</p>
+    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code"><br>
+    <a href="/login">Proceed to Login</a>
+</body>
+</html>

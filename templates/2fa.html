@@ -1,27 +1,54 @@
-<h3>Scan this QR code to set up 2FA</h3>
-<img src="{{ url_for('static', filename=qr_code_path) }}" alt="QR Code">
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Two-Factor Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: calc(100% - 22px); /* Adjust for padding and border */
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Two-Factor Authentication</h1>
-    <form id="2fa-form" action="/2fa-handler" method="POST">
-        <label for="2fa-code">Enter the code sent to your email:</label>
-        <input type="text" id="2fa-code" name="2fa-code" required>
-        <button type="submit">Verify</button>
+    <form method="POST">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" name="token" required><br>
+        <input type="submit" value="Verify">
     </form>
 </body>
-
-<form id="2fa-form" action="/2fa-handler" method="POST">
-    <label for="2fa-code">Enter the code sent to your email:</label>
-    <input type="text" id="2fa-code" name="2fa-code" required>
-    <button type="submit">Verify</button>
-</form>
-
 </html>
-
