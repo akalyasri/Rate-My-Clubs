@@ -3,54 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Sign Up</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
+        .register-container {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
         h1 {
-            color: #333;
+            color: #343a3f;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
         }
-        form {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .register-container label {
+            display: block;
+            font-size: 14px;
+            color: #a7b0ba;
+            margin-bottom: 8px;
+            text-align: left;
         }
-        input[type="text"], input[type="password"] {
+
+        .register-container input[type="text"], 
+        .register-container input[type="password"] {
+            width: 100%;
             padding: 10px;
             font-size: 16px;
-            margin: 10px 0;
-            width: calc(100% - 22px); /* Adjust for padding and border */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: border 0.3s ease;
         }
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
+
+        .register-container input[type="text"]:focus, 
+        .register-container input[type="password"]:focus {
+            outline: none;
+            border-color: #ff545a;
+        }
+
+        .register-container input[type="submit"] {
+            width: 100%;
+            background-color: #ff545a;
+            color: #ffffff;
             border: none;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
+
+        .register-container input[type="submit"]:hover {
+            background-color: #e43e4a;
+        }
+
+        .register-container p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #a7b0ba;
+        }
+
+        .register-container p a {
+            color: #ff545a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-container p a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Register</h1>
-    <form method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-        <input type="submit" value="Register">
-    </form>
+    <div class="register-container">
+        <h1>Sign Up</h1>
+        <form method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
 </body>
 </html>
