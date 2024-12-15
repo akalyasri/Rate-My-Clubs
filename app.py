@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from qrCode import generate_qr_code as generate_review_qr_code
-from twoFA import generate_qr_code as generate_2fa_qr_code
 from database import create_app, db, User, Club, Review  # Adjusted import for database setup
 
 import pyotp
@@ -52,7 +50,8 @@ def two_factor():
         if username:
             totp = pyotp.TOTP(users[username]['secret'], digits=6)
             if totp.verify(token):
-                return 'Login successful!'
+                #return 'Login successful!'
+                return render_template('index.html')
             else:
                 return 'Invalid OTP!'
         return 'Invalid session!'
